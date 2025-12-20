@@ -1,0 +1,3 @@
+DROP TABLE t_users IF EXIST;
+DROP TABLE t_drinks IF EXIST;
+DROP TABLE t_orders IF EXIST;

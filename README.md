@@ -96,3 +96,34 @@ npm install
 
 # run locally
 npm run dev
+npm install --save-dev @types/pg
+npm install --save-dev @types/node
+
+brew services start postgresql@14
+brew services list 
+#  expected result
+Name          Status  User        File
+mysql         stopped sidneychong ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+postgresql@14 started sidneychong ~/Library/LaunchAgents/homebrew.mxcl.postgresql@14.plist
+
+## inside psql
+## Create a role (user) for your project
+CREATE ROLE myuser WITH LOGIN PASSWORD 'password';
+
+## Create a database for your project
+CREATE DATABASE myapp;
+
+## Give privileges
+GRANT ALL PRIVILEGES ON DATABASE myapp TO myuser;
+
+-----------------------------------------------------------------
+# set up env
+
+
+## test connection
+psql -U myuser -d what_you_want_db
+
+npx ts-node src/migrate.ts
+```
+
+

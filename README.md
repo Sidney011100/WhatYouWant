@@ -111,10 +111,10 @@ postgresql@14 started sidneychong ~/Library/LaunchAgents/homebrew.mxcl.postgresq
 CREATE ROLE myuser WITH LOGIN PASSWORD 'password';
 
 ## Create a database for your project
-CREATE DATABASE myapp;
+CREATE DATABASE what_you_want_db;
 
 ## Give privileges
-GRANT ALL PRIVILEGES ON DATABASE myapp TO myuser;
+GRANT ALL PRIVILEGES ON DATABASE what_you_want_db TO myuser;
 
 -----------------------------------------------------------------
 # set up env

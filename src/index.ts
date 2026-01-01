@@ -2,10 +2,14 @@
 
 import express from "express";
 import { firebaseAuth } from "./middleware/firebaseAuth";
+import userRoutes from "./routes/userRoutes";
 import { createOrderController } from "./controllers/orderController";
 
 const app = express();
 app.use(express.json());
+
+
+app.use("/users", userRoutes);
 
 // Dummy route
 app.get("/users/:id", firebaseAuth, (req, res) => {

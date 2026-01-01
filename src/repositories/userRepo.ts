@@ -9,7 +9,7 @@ export interface User {
 
 export async function createUserIfNotExists(
   firebaseUid: string,
-  email?: string
+  email?: string | null
 ): Promise<User> {
   const query = `
     INSERT INTO t_users (firebase_uid, email)
